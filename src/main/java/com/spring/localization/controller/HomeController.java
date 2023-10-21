@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 
     @GetMapping()
-    public String getMessage() {
-        return Translator.toLocale("greeting");
+    public String home() {
+        return Translator.toLocale("welcome");
     }
 
 }

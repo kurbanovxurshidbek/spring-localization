@@ -10,6 +10,7 @@ import java.util.Locale;
 @Component
 public class Translator {
 
+    @Autowired
     private static ResourceBundleMessageSource messageSource;
 
     @Autowired

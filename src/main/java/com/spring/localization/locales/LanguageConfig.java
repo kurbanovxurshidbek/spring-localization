@@ -15,7 +15,9 @@ public class LanguageConfig extends AcceptHeaderLocaleResolver implements WebMvc
 
     List<Locale> LOCALES = Arrays.asList(
             Locale.forLanguageTag("en"),
-            Locale.forLanguageTag("fr"));
+            Locale.forLanguageTag("fr"),
+            Locale.forLanguageTag("ru"),
+            Locale.forLanguageTag("kr"));
 
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
@@ -30,6 +32,7 @@ public class LanguageConfig extends AcceptHeaderLocaleResolver implements WebMvc
         ResourceBundleMessageSource rs = new ResourceBundleMessageSource();
         rs.setBasename("messages");
         rs.setDefaultEncoding("UTF-8");
+        rs.setFallbackToSystemLocale(false);
         rs.setUseCodeAsDefaultMessage(true);
         return rs;
     }
